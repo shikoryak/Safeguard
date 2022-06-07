@@ -1,3 +1,14 @@
+.button-top {
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background: none;
+    position: fixed;
+    z-index: 100;
+    right: 100px;
+    bottom: 100px;
+}
+
 .fool-header {
     background: var(--color-orange);
 }
@@ -6,6 +17,11 @@
     display: flex;
     justify-content: space-between;
     gap: 9%;
+
+    &-scroll {
+        display: block;
+        margin: 65px 0 55px;
+    }
 }
 
 .half-block {
@@ -15,6 +31,12 @@
     .button-raised-white {
         margin-top: 63px;
         font-size: var(--font-size-large);
+    }
+
+    &-image {
+        overflow: hidden;
+        flex: 0 0 62%;
+        width: 62%;
     }
 }
 
@@ -64,10 +86,25 @@ h2 {
 
 .global-description {
     margin-top: 239px;
+    position: relative;
 
     .container {
         display: flex;
         gap: 10%;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        width: 37%;
+        height: calc(100% + 120px);
+        background-color: var(--color-light-gray);
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        top: -60px;
     }
 }
 
@@ -92,6 +129,16 @@ h2 {
         font-size: var(--font-size-large);
         line-height: 21px;
         color: var(--color-black);
+
+        &:before {
+            content: '';
+            background: var(--color-orange);
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
     }
 }
 
@@ -102,6 +149,8 @@ h2 {
         display: flex;
         justify-content: space-between;
         margin-top: 116px;
+        gap: 20px;
+        overflow-y: overlay;
 
         p {
             font-family: inherit;
@@ -225,6 +274,20 @@ h2 {
     &-clients {
         padding-left: 30px;
         flex: 1;
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-color: var(--color-light-gray);
+            border-radius: 12px;
+            position: absolute;
+            z-index: -1;
+            left: 0px;
+            top: 10px;
+        }
 
         p.shadow {
             text-align: left;
@@ -245,13 +308,103 @@ h2 {
     }
 }
 
-
-
-
 p.shadow.shadow {
     font-weight: 400;
     font-size: var(--font-size-medium);
     line-height: 180%;
     text-align: center;
     color: var(--color-dark-gray);
+}
+
+
+@media only screen and (max-width: 1660px) {
+    .banner {
+        gap: 10px;
+        justify-content: flex-start;
+
+        &-image {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .half-block {
+        flex: 0 0 40%;
+        width: 40%;
+    }
+
+    .half-block-image {
+        flex: 0 0 60%;
+        width: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+    .banner {
+        flex-direction: column;
+    }
+
+    .half-block {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+    .global-description {
+        background-color: var(--color-light-gray);
+        margin-top: 70px;
+        padding: 70px 0;
+
+        &:before {
+            content: none;
+        }
+
+        .half-block:last-of-type {
+            display: none;
+        }
+    }
+
+    .our-work {
+        margin-top: 70px;
+    }
+
+    .our-experience {
+        &-description {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &-item {
+            padding-top: 30px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 830px) {
+    .our-benefits-desc {
+        flex-direction: column;
+
+        &-clients p.shadow {
+            color: var(--color-black);
+        }
+    }
+
+    .benefits {
+
+        .container {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        &-item {
+            width: 100%;
+        }
+    }
+    .button-top {
+        bottom: 20px;
+        right: 20px;
+    }
 }

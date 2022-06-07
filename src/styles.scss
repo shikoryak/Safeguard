@@ -5,10 +5,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-size: var(--font-size-large);
     font-family: var(--font-ubuntu);
+    min-width: 375px;
 }
 
 .container {
@@ -28,6 +33,11 @@ body {
     font-weight: 500;
     height: 61px;
     width: 170px;
+    cursor: pointer;
+
+    &:active {
+        box-shadow: none;
+    }
 }
 
 .button-raised {

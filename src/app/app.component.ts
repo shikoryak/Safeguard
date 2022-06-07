@@ -1,19 +1,6 @@
 import { Component } from '@angular/core';
-interface Benefit {
-  count: string;
-  currency: string;
-  description: string;
-}
-interface Experience {
-  number: string;
-  title: string;
-  description: string;
-}
-interface Work {
-  title: string;
-  description: string;
-  link: string;
-}
+import { Benefit, Experience, Part, Work } from './shared/interfaces/base.interface';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -36,7 +23,8 @@ export class AppComponent {
       currency: 'Billions',
       description: 'Of experience in minimizing risk and protecting assets.'
     }
-  ]
+  ];
+
   experienceList: Experience[] = [
     {
       number: '25+',
@@ -58,7 +46,7 @@ export class AppComponent {
       title: 'employees working',
       description: 'For your legal security.'
     }
-  ]
+  ];
 
   ourWorks: Work[] = [
     {
@@ -76,5 +64,40 @@ export class AppComponent {
       description: "We're here to help and answer any question you might have. We look forward to hearing from you.",
       link: 'Our Timeline'
     }
+  ];
+  partList: Part[] = [
+    {
+      number: '1',
+      description: 'Training and <br> Implementation',
+      image: {
+        src: '/assets/images/statistic.png',
+        alt: 'Statistic'
+      }
+    },
+    {
+      number: '2',
+      description: 'Cyber <br> Consultants',
+      image: {
+        src: '/assets/images/message.png',
+        alt: 'Message'
+      }
+    },
+    {
+      number: '3',
+      description: 'Consultancy and<br>brand protection',
+      image: {
+        src: '/assets/images/brand-protection.png',
+        alt: 'Brand protection'
+      }
+    },
+    {
+      number: '4',
+      description: 'Software',
+      image: {
+        src: '/assets/images/software.png',
+        alt: 'Software'
+      }
+    }
+
   ]
 }

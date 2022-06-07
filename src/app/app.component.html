@@ -1,4 +1,6 @@
-<section class="fool-header">
+<a href="#start" class="button-top"><img src="/assets/images/button-top.svg" alt="Button top" width="50" height="50"></a>
+
+<section id="start" class="fool-header">
   <div class="container">
     <app-header></app-header>
     <section class="banner">
@@ -9,8 +11,9 @@
           operate risk-free and focus on your
           core business.</p>
         <button class="button-raised-white">Learn More</button>
+        <img class="banner-scroll" src="/assets/images/scroll.svg" alt="Scroll" width="21" height="85">
       </div>
-      <div class="half-block">
+      <div class="half-block half-block-image">
         <img class="banner-image" src="/assets/images/space-helmet.png" alt="Space helmet" width="826" height="647">
       </div>
 
@@ -53,37 +56,13 @@
     <h3><span class="highlight">Who We</span> Do</h3>
     <div class="our-work-part">
 
-      <div class="our-work-part-list">
+      <div class="our-work-part-list" *ngFor="let item of partList">
         <div class="our-work-part-item">
-          <div class="number">1</div>
-          <h4>Training and <br> Implementation</h4>
+          <div class="number">{{item.number}}</div>
+          <h4 [innerHtml]="item.description"></h4>
         </div>
-        <a href="#"><img class="our-work-image" src="/assets/images/statistic.png" alt="Statistic" width="270" height="476"></a>
-      </div>
-
-      <div class="our-work-part-list">
-        <div class="our-work-part-item">
-          <div class="number">2</div>
-          <h4>Cyber<br>Consultants</h4>
-        </div>
-        <a href="#"><img class="our-work-image" src="/assets/images/message.png" alt="Message" width="270" height="476"></a>
-      </div>
-
-      <div class="our-work-part-list">
-        <div class="our-work-part-item">
-          <div class="number">3</div>
-          <h4>Consultancy and<br>brand protection</h4>
-        </div>
-        <a href="#"><img class="our-work-image" src="/assets/images/brand-protection.png" alt="Brand protection" width="270"
-          height="476"></a>
-      </div>
-
-      <div class="our-work-part-list">
-        <div class="our-work-part-item">
-          <div class="number">4</div>
-          <h4>Software</h4>
-        </div>
-        <a href="#"><img class="our-work-image" src="/assets/images/software.png" alt="Software" width="270" height="476"></a>
+        <a href="#"><img class="our-work-image" [src]="item.image.src" [alt]="item.image.alt" width="270"
+            height="476"></a>
       </div>
     </div>
 
@@ -122,15 +101,11 @@
       <div class="our-benefits-desc-clients" *ngFor="let item of ourWorks">
         <p [innerHtml]="item.title"></p>
         <p class="shadow">{{item.description}}</p>
-        <a href="#" class="case-studies">{{item.link}}<img src="/assets/images/arrow-right.svg"
-            alt="Arrow right"></a>
+        <a href="#" class="case-studies">{{item.link}}<img src="/assets/images/arrow-right.svg" alt="Arrow right"></a>
       </div>
     </div>
   </div>
 </section>
 
-
-
-
-<!-- <app-contact-us></app-contact-us> -->
+<app-contact-us></app-contact-us>
 <app-footer></app-footer>

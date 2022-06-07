@@ -1,6 +1,5 @@
 .footer {
     background: var(--color-black);
-    height: 776px;
 
     &-contact {
 
@@ -24,7 +23,7 @@
 
 .footer-information {
     display: flex;
-    padding-top: 297px;
+    padding-top: 300px;
 }
 
 .footer-main {
@@ -53,4 +52,21 @@
     line-height: 300%;
     color: var(--color-dark-gray);
     text-decoration: none;
+}
+
+@media only screen and (max-width: 830px) {
+    .footer {
+        &-information {
+            flex-wrap: wrap;
+            padding-top: 190px;
+        }
+
+        &-contact {
+            width: 100%;
+        }
+
+        &-main {
+            width: 50%;
+        }
+    }
 }

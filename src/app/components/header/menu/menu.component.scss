@@ -16,6 +16,7 @@
     height: 50px;
     padding: 14px 20px;
     box-shadow: none;
+    cursor: pointer;
 
     &.active {
         background: var(--color-white);
@@ -28,4 +29,19 @@
     border-radius: 16px;
     height: 22px;
     margin: 22px 40px;
+}
+.menu-button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 830px) {
+    .menu-item {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
 }
