@@ -1,0 +1,257 @@
+.fool-header {
+    background: var(--color-orange);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    gap: 9%;
+}
+
+.half-block {
+    flex: 0 0 50%;
+    width: 50%;
+
+    .button-raised-white {
+        margin-top: 63px;
+        font-size: var(--font-size-large);
+    }
+}
+
+.fool-header {
+    padding-top: 56px;
+}
+
+h2 {
+    font-family: var(--font-anton);
+    font-size: 68px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-black);
+    line-height: 130%;
+}
+
+.content-description {
+    line-height: 160%;
+}
+
+.benefits .container {
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.spending {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: var(--font-size-x-large);
+    line-height: 28px;
+    color: var(--color-black);
+    text-align: center;
+    margin: 0;
+}
+
+.benefits-item {
+    width: 33.3%;
+
+    .text-base {
+        font-size: var(--font-size-medium);
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+.global-description {
+    margin-top: 239px;
+
+    .container {
+        display: flex;
+        gap: 10%;
+    }
+}
+
+.description-item {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: var(--font-size-large);
+    line-height: 180%;
+    color: var(--color-black);
+}
+
+.our-team {
+    font-family: inherit;
+    font-size: var(--font-size-x-large);
+    font-weight: 700;
+    line-height: 160%;
+    color: var(--color-black);
+
+    &-item {
+        font-family: inherit;
+        font-weight: 400;
+        font-size: var(--font-size-large);
+        line-height: 21px;
+        color: var(--color-black);
+    }
+}
+
+.our-work {
+    margin-top: 220px;
+
+    &-part {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 116px;
+
+        p {
+            font-family: inherit;
+            font-weight: 700;
+            font-size: var(--font-size-x-large);
+            line-height: 160%;
+            color: var(--color-black);
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            min-height: 76px;
+            margin-bottom: 51px;
+        }
+    }
+
+    .number {
+        width: 60px;
+        height: 60px;
+        background: var(--color-gray);
+        border-radius: 12px;
+        color: var(--color-orange);
+        font-family: inherit;
+        font-weight: 700;
+        font-size: --font-size-x-large;
+        line-height: 28px;
+        padding: 16px 23px;
+    }
+}
+
+.our-work-button {
+    align-items: center;
+    margin-top: 116px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.our-work-button .button-raised-white {
+    color: var(--color-orange);
+    border: 1px solid var(--color-orange);
+}
+
+.our-experience {
+    background-color: var(--color-orange);
+    margin-top: 160px;
+    padding-bottom: 160px;
+
+    h3 {
+        padding-top: 160px;
+    }
+
+    p {
+        color: var(--color-black);
+        font-family: inherit;
+        font-weight: 400;
+        font-size: var(--font-size-large);
+        line-height: 180%;
+    }
+
+    &-description {
+        display: flex;
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    &-item {
+        background: var(--color-white);
+        border-radius: 12px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.16);
+        flex: 1;
+        padding: 74px 0 30px;
+
+        span {
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 90px;
+            line-height: 103px;
+            text-transform: 103px;
+            color: var(--color-orange);
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin: 0;
+            font-family: inherit;
+            font-size: var(--font-size-larger);
+            line-height: 160%;
+            text-align: center;
+            font-weight: 700;
+            color: var(--color-black);
+
+            &:last-of-type {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.our-benefits {
+    margin-top: 160px;
+
+    &-desc-clients p {
+        font-family: inherit;
+        font-weight: 700;
+        font-size: var(--font-size-x-large);
+        line-height: 160%;
+        color: var(--color-black);
+    }
+}
+
+.our-benefits-desc {
+    display: flex;
+    margin-top: 75px;
+    gap: 30px;
+
+    &-clients {
+        padding-left: 30px;
+        flex: 1;
+
+        p.shadow {
+            text-align: left;
+        }
+    }
+}
+
+.case-studies {
+    font-size: var(--font-size-medium);
+    font-weight: 500;
+    line-height: 18px;
+    font-family: inherit;
+    color: var(--color-orange);
+    text-decoration: none;
+
+    img {
+        margin-left: 20px;
+    }
+}
+
+
+
+
+p.shadow.shadow {
+    font-weight: 400;
+    font-size: var(--font-size-medium);
+    line-height: 180%;
+    text-align: center;
+    color: var(--color-dark-gray);
+}

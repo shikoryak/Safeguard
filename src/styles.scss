@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/shared/styles/variable.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: var(--font-size-large);
+    font-family: var(--font-ubuntu);
+}
+
+.container {
+    max-width: 1218px;
+    width: 100%;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+@mixin button-base {
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+    font-size: var(--font-size-medium);
+    text-align: center;
+    font-family: inherit;
+    font-weight: 500;
+    height: 61px;
+    width: 170px;
+}
+
+.button-raised {
+    @include button-base;
+    background: var(--color-orange);
+    color: var(--color-white);
+
+    &-white {
+        @include button-base;
+        background: var(--color-white);
+        color: var(--color-black);
+    }
+}
+
+.button-stroked {
+    @include button-base;
+    border: 1px solid var(--color-orange);
+    background: var(--color-white);
+    color: var(--color-orange);
+}
+
+.text-base {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-large);
+    font-weight: 400;
+    line-height: 180%;
+    color: var(--color-black);
+    font-family: inherit;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-anton);
+    font-size: var(--font-size-xxx-large);
+    font-weight: 400;
+    line-height: 75px;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: var(--font-size-x-large);
+    font-weight: 700;
+    line-height: 160%;
+    color: var(--color-black);
+}
+
+.highlight {
+    color: var(--color-orange);
+}
