@@ -44,7 +44,10 @@
                 font-size: var(--font-size-xx-small);
                 line-height: 14px;
                 color: var(--color-dark-gray);
-                padding-top: 50px;
+
+                &:not(:first-of-type) {
+                    padding-top: 50px;
+                }
             }
 
             .button-raised {
@@ -83,6 +86,10 @@
 
             label {
                 padding-top: 20px;
+            }
+
+            input, textarea {
+                font-size: var(--font-size-x-small);
             }
 
             textarea {

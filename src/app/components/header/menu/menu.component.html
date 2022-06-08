@@ -1,4 +1,23 @@
 
 <button class="menu-item" [class.active]="i === activeButtonIndex"
     *ngFor="let item of buttons; let i = index">{{item}}</button>
-<button class="menu-button"><img src="/assets/images/menu-button.svg" alt="Menu button" width="30" height="20"></button>
+
+
+<button class="menu-button" (click)="triggerMobileMenu()"><img src="/assets/images/menu-button.svg" alt="Menu button" width="30" height="20"></button>
+
+<section class="mobile-menu" *ngIf="isMobileMenuOpen">
+    <div class="logo">
+        <img src="/assets/images/logo.svg" alt="Logo">
+        <button class="close" (click)="triggerMobileMenu()"></button>
+    </div>
+    <button>Home</button>
+    <button>What we do</button>
+    <button>About us</button>
+    <button>Our history</button>
+    <button>Contact us</button>
+    <p>Services</p>
+    <button>Training and <br> Implementation</button>
+    <button>Cyber Consultants</button>
+    <button>Consultancy and <br> brand protection</button>
+    <button>Software</button>
+</section>

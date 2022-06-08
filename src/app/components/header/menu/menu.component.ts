@@ -9,9 +9,15 @@ export class MenuComponent implements OnInit {
   buttons: string[] = ['Home', 'About Us', 'What We Do', 'Contact Us'];
   activeButtonIndex = 0;
 
+  isMobileMenuOpen = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  triggerMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
 }

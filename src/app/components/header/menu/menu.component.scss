@@ -30,6 +30,7 @@
     height: 22px;
     margin: 22px 40px;
 }
+
 .menu-button {
     border: 0;
     background: none;
@@ -37,11 +38,81 @@
     display: none;
 }
 
+.mobile-menu {
+    position: fixed;
+    z-index: 101;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: var(--color-orange);
+    padding: 40px 25px;
+    overflow-y: auto;
+    display: none;
+
+    .close {
+        width: 30px;
+        height: 30px;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: none;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: var(--color-black);
+            border-radius: 1px;
+            position: absolute;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .logo {
+        margin-bottom: 56px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p {
+        margin: 60px 0 28px;
+        opacity: 0.5;
+        color: var(--color-black);
+        font-family: inherit;
+        font-weight: 500;
+        font-size: var(--font-size-large);
+        line-height: 160%;
+    }
+
+    button {
+        font-family: inherit;
+        font-weight: 500;
+        font-size: var(--font-size-x-large);
+        line-height: 100%;
+        color: var(--color-black);
+        display: block;
+        background: none;
+        border: 0;
+        padding: 0;
+        text-align: left;
+        margin-bottom: 28px;
+    }
+}
+
 @media only screen and (max-width: 830px) {
     .menu-item {
         display: none;
     }
-    .menu-button {
+
+    .menu-button, .mobile-menu {
         display: block;
     }
 }
